@@ -40,10 +40,20 @@ h4 { font-size: ${size.h4}; line-height: ${size.h4}; margin: 0; }
 }
 `
 
-const Bg = styled.img`
-  width: 120%;
+const Wrapper = styled.section`
+  width: 100vw;
+  height: calc(443vw + 25vw);
+`;
 
-  filter: grayscale(100%);
+const Bg = styled.img`
+  position: absolute;
+  width: calc(100% + 60px);
+  transform: translate3d(-40px, 30px, 0);
+  filter: blur(10px);
+`;
+const Logo = styled.h1`
+  margin: 20px 10px 30px;
+  filter: blur(4px);
 `;
 
 export default () => (
@@ -57,13 +67,11 @@ export default () => (
         {style}
       </style>
     </Helmet>
-    <Bg src="/static/13/bg3.jpg"/>
-    <Bg src="/static/13/bg3.jpg"/>
-    <Bg src="/static/13/bg3.jpg"/>
-    <Bg src="/static/13/bg3.jpg"/>
-    <Bg src="/static/13/bg3.jpg"/>
-    <Bg src="/static/13/bg3.jpg"/>
-    <Bg src="/static/13/bg3.jpg"/>
-    <Bg src="/static/13/bg3.jpg"/>
+
+    <Wrapper>
+        <Logo><img src="/static/13/logo.png"/></Logo>
+        <Bg src="/static/13/bg3.jpg"/>
+    </Wrapper>
+
   </div>
 )
