@@ -5,9 +5,10 @@
   "description": "javascript.kyoto implementation",
   "dependencies": {
     "jquery": "^3.1.1",
+    "next": "beta",
     "normalize.css": "^4.2.0",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "smoothscroll": "^0.2.2"
   },
   "devDependencies": {
@@ -27,16 +28,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "npm-run-all -p build:js build:css build:html",
-    "build:css": "node-sass --include-path=./src/scss src/scss/index.scss -o app",
-    "build:html": "mkdir -p app && cp src/index.html app/index.html",
-    "build:js": "webpack",
-    "serve": "browser-sync start -c bs-config.js",
-    "start": "npm-run-all -s build -p watch serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm-run-all -p watch:js watch:css watch:html",
-    "watch:css": "node-sass -w -r src/scss --include-path=./src/scss src/scss/index.scss -o app",
-    "watch:html": "cpx 'src/**/*.{html,png,jpg}' app -w",
-    "watch:js": "webpack --watch"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   }
 }
