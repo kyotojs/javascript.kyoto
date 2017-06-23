@@ -10,7 +10,7 @@ const handleClick = (e, selector) => {
 };
 
 const ScrollLink = ({ href, children }) => (
-  <a href={href} onClick={(e) => handleClick(e, href)}>{children}</a>
+  <a style={{color: 'white'}} href={href} onClick={(e) => handleClick(e, href)}>{children}</a>
 );
 
 export default ScrollLink;
