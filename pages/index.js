@@ -1,3 +1,7 @@
+import Header from '../components/Header'
+
 export default () => (
-  <div>Welcome to next.js!</div>
+  <div>
+    <Header/>
+  </div>
 )
