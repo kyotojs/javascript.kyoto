@@ -2,16 +2,22 @@ import styled from 'styled-components';
 import {Helmet} from "react-helmet";
 import Bg from './bg';
 
-const Wrapper = styled.section`
-  width: 100%;
+const Wrapper = styled.div`
+  line-height: 1.6em;
+  // text-shadow: 0 0 2px white, 0 0 4px white;
+  text-shadow: 0 0 1px black, 0 0 4px white, 0 0 4px white;
+  filter: blur(1px);
+  max-width: 960px;
+  margin: 0 auto;
 
-  section {
-    margin: 180px 10px;
-  }
 `;
 
 const Logo = styled.h1`
-  margin: 20px 10px 30px;
+  width: 90%;
+  margin: 20px 5%;
+  img {
+    width: 100%;
+  }
 `;
 
 const BgWrapper = styled.div`
@@ -22,6 +28,44 @@ const BgWrapper = styled.div`
   height: 100%;
   z-index: -1;
 `
+
+const Section = styled.section`
+  margin: 180px 10px;
+`;
+
+const TimetableSection = Section.extend`
+  ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+  li {
+    margin-bottom: 10px;
+    // white-space: nowrap;
+  }
+`;
+
+const LinkSection = styled.section`
+  margin: -40px 10px 60px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+const Footer = styled.footer`
+  text-align: center;
+  width: 100%;
+  height: 210px;
+  line-height: 180px;
+  font-weight: bold;
+  img {
+    height: 2.5em;
+    margin-top: -3px;
+  }
+`;
 
 export default () => (
   <div>
@@ -40,68 +84,41 @@ export default () => (
     <Wrapper>
       <Logo><img src="/static/13/logo.png"/></Logo>
 
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
+      <Section>
+        <h2>今回のテーマは「無常」</h2>
+        <p>技術だけじゃ、何も起きない</p>
+      </Section>
 
-      <section>
-        <h2>Timetable</h2>
+      <Section>
+        <h2>Speakers</h2>
         <p>TBD</p>
-      </section>
+      </Section>
 
-      <section>
+      <TimetableSection>
         <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
+        <ul>
+          <li>13:00 開始</li>
+          <li>13:10 「ライブコーディング環境をつくってみた」amagitakayosi</li>
+          <li>13:30 「TBD」john doe</li>
+          <li>13:50 休憩</li>
+          <li>14:00 「TBD」john doe</li>
+          <li>14:20 「TBD」john doe</li>
+          <li>14:40 休憩</li>
+          <li>14:50 「TBD」(LT) john doe</li>
+          <li>15:00 「TBD」(LT) john doe</li>
+          <li>15:10 「TBD」(LT) john doe</li>
+          <li>15:20 「TBD」(LT) john doe</li>
+          <li>15:30 懇親会</li>
+        </ul>
+      </TimetableSection>
 
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
-        <h2>Timetable</h2>
-        <p>TBD</p>
-      </section>
-
-      <section>
+      <LinkSection>
         <h2><a href="https://kyotojs.connpass.com/event/60422/" target="_blank">参加申込みはこちらから</a></h2>
-      </section>
+      </LinkSection>
 
-      <footer>
-        from kyoto with love
-      </footer>
+      <Footer>
+        by <img src="/static/logo960.png"/>
+      </Footer>
     </Wrapper>
   </div>
 )
