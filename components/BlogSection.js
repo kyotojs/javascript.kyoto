@@ -71,8 +71,8 @@ export default () => (
         <TitleImageEl src="/static/logo_blog960.png" alt="Kyoto.js Blog"/>
       </TitleEl>
       <SubTitleEl height="90">
-        <HighlightEl shadow={color.yellow} href="//blog.javascript.kyoto/">
-          blog.javascript.kyoto
+        <HighlightEl shadow={color.yellow} href="http://kyotojs.hatenablog.jp/">
+          kyotojs.hatenablog.jp
         </HighlightEl>
       </SubTitleEl>
     </HeaderEl>
@@ -84,11 +84,11 @@ export default () => (
           If you are interested, please tell us and write posts about JavaScript!!
         </p>
         <p>
-          blog.javascript.kyoto is powered by <a href="http://hatenablog.com/">Hatena Blog</a>.
+          kyotojs.hatenablog.jp is powered by <a href="http://hatenablog.com/">Hatena Blog</a>.
         </p>
       </CellEl>
       <CellEl>
-        <a href="http://blog.javascript.kyoto">
+        <a href="http://kyotojs.hatenablog.jp/">
           <BlogImgEl src="/static/blog_screenshot.png" alt="Kyoto.js Blog Screenshot"/>
         </a>
       </CellEl>

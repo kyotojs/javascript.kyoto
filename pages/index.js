@@ -51,15 +51,15 @@ export default () => (
       <meta name="twitter:site" content="@kyoto_js"/>
       <meta property="og:title" content="Kyoto.js - JavaScript Community in Kyoto"/>
       <meta property="og:type" content="website"/>
-      <meta property="og:url" content="http://javascript.kyoto/"/>
-      <meta property="og:image" content="http://javascript.kyoto//static/logo960.png"/>
-      <meta property="og:description" content="Kyoto.js is a JavaScript Community in Kyoto. We hold meetups a few times a year, and are always talking about JavaScript and frontend technologies on Slack!"/>>
-      <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/180.png"/>>
-      <link rel="apple-touch-icon-precomposed" href="/static/icons/180.png"/>>
-      <link rel="shortcut icon" href="/static/icons/192.png"/>>
-      <link rel="icon" sizes="192x192" href="/static/icons/192.png"/>>
-      <link rel="icon" type="image/png" href="/static/icons/192.png" sizes="192x192"/>>
-      <meta name="theme-color" content="#ffffff"/>>
+      <meta property="og:url" content="http://kyoto.js.org/"/>
+      <meta property="og:image" content="http://kyoto.js.org/static/logo960.png"/>
+      <meta property="og:description" content="Kyoto.js is a JavaScript Community in Kyoto. We hold meetups a few times a year, and are always talking about JavaScript and frontend technologies on Slack!"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/180.png"/>
+      <link rel="apple-touch-icon-precomposed" href="/static/icons/180.png"/>
+      <link rel="shortcut icon" href="/static/icons/192.png"/>
+      <link rel="icon" sizes="192x192" href="/static/icons/192.png"/>
+      <link rel="icon" type="image/png" href="/static/icons/192.png" sizes="192x192"/>
+      <meta name="theme-color" content="#ffffff"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css"/>
       <style>
         {style}
