@@ -130,7 +130,10 @@ export default class ThreeShader {
     animate = () => {
         this.frame++;
         if (!this.isPlaying) { return; }
+
         requestAnimationFrame(this.animate);
+        // setTimeout(this.animate, 30);
+
         if (this.frame % this.skip === 0) {
             this.render();
         }
