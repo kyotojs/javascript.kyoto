@@ -71,9 +71,23 @@ export default () => (
   <div>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Kyoto.js 13</title>
-      <meta name="theme-color" content="#ffffff"/>>
+      <title>Kyoto.js XIII</title>
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="twitter:card" content="summary"/>
+      <meta name="twitter:site" content="@kyoto_js"/>
+      <meta property="og:title" content="Kyoto.js XIII"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="http://kyoto.js.org/13"/>
+      <meta property="og:image" content="http://kyoto.js.org/static/13/logo.png"/>
+      <meta property="og:description" content="The 13th meetup of Kyoto.js"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/180.png"/>
+      <link rel="apple-touch-icon-precomposed" href="/static/icons/180.png"/>
+      <link rel="shortcut icon" href="/static/icons/192.png"/>
+      <link rel="icon" sizes="192x192" href="/static/icons/192.png"/>
+      <link rel="icon" type="image/png" href="/static/icons/192.png" sizes="192x192"/>
+      <meta name="theme-color" content="#ffffff"/>
+
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css"/>
     </Helmet>
 
