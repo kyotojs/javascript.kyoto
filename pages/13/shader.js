@@ -32,7 +32,7 @@ float fbm(in vec2 p) {
   float q = 0.;
   float oct = 1.;
   float off = 0.1;
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 3; i++) {
     q += random(p * oct *0.0001 + off) / oct / 2.;
     oct *= 2.;
     off += 2.0;
@@ -43,9 +43,9 @@ float fbm(in vec2 p) {
 vec4 lighten(in vec4 p) {
   vec4 x = vec4(0);
   float n = 3.;
-  x.r = 1.3 - pow(1. - p.r, n);
-  x.g = 1.3 - pow(1. - p.g, n);
-  x.b = 1.6 - pow(1. - p.b, n);
+  x.r = 1.0 - pow(1. - p.r, n);
+  x.g = 1.0 - pow(1. - p.g, n);
+  x.b = 1.2 - pow(1. - p.b, n);
   x.a = p.a;
   return x;
 }
@@ -53,6 +53,7 @@ vec4 lighten(in vec4 p) {
 void main( void ) {
 	vec2 p = gl_FragCoord.xy / resolution;
   float xx = fbm(vec2((p.x + mod(time * -0.03, 13.)) * 3., p.y + time * 0.02) + 1.);
+  //float xx = noise(vec2((p.x * 200. + mod(time * -0.03, 13.)) * 3., p.y + time * 0.02) + 1.);
   p.y = ((1. - p.y) + scroll) / 3.4 - (movement * .002 * xx);
 
   vec2 q = vec2(

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ThreeShader from './three-shader';
 import fragment from './shader';
+import isMobile from './is-mobile';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -13,10 +14,12 @@ const Wrapper = styled.div`
   }
 `;
 
+const d = 0.96;
 let movement = 10000;
 let lastScroll = 0;
 let scroll = 0;
 let isWatching = false;
+let last = null;
 
 export default class Bg extends React.Component {
   loadShader = article => {
@@ -38,12 +41,19 @@ export default class Bg extends React.Component {
   getScroll = () => scroll;
 
   update = (e) => {
-    movement = movement * 0.96 + (lastScroll - window.scrollY) * 0.2;
+    if (!window) { return; }
+    const delta = last ? Date.now() - last : 1;
+    const decay = Math.pow(d, delta / 16);
+
+    movement = movement * decay + (lastScroll - window.scrollY) * 0.2;
     lastScroll = window.scrollY;
     scroll = window.scrollY / (document.body.scrollHeight - window.innerHeight);
 
+    last = Date.now();
+
     if (isWatching) {
       requestAnimationFrame(this.update);
+      // setTimeout(() => this.update(), 30);  // for debug
     }
   }
 

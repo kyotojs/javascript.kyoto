@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {Helmet} from "react-helmet";
 import Bg from './bg';
+import isMobile from './is-mobile';
 
 const Wrapper = styled.div`
   line-height: 1.6em;
@@ -10,6 +11,9 @@ const Wrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
 
+  section, footer {
+    padding-right: 5px;  // 全体的に少し左に寄せる
+  }
 `;
 
 const Logo = styled.h1`
@@ -29,8 +33,33 @@ const BgWrapper = styled.div`
   z-index: -1;
 `
 
+const BgImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
 const Section = styled.section`
   margin: 180px 10px;
+  text-align: center;
+  margin-left 0px;
+
+  p {
+    margin: 50px 0;
+  }
+`;
+
+const SpeakersSection = Section.extend`
+  div {
+    display: inline-block;
+    width: 120px;
+    img {
+      display: block;
+      width: 90px;
+      margin: 15px;
+      border-radius: 50%;
+    }
+    font-weight: bold;
+  }
 `;
 
 const TimetableSection = Section.extend`
@@ -48,9 +77,9 @@ const LinkSection = styled.section`
   margin: -40px 10px 60px;
   text-align: center;
   a {
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    color: black;
+    &:visited {
+      color: black;
     }
   }
 `;
@@ -78,8 +107,8 @@ export default () => (
       <meta name="twitter:site" content="@kyoto_js"/>
       <meta property="og:title" content="Kyoto.js XIII"/>
       <meta property="og:type" content="website"/>
-      <meta property="og:url" content="http://kyoto.js.org/13"/>
-      <meta property="og:image" content="http://kyoto.js.org/static/13/logo.png"/>
+      <meta property="og:url" content="https://kyoto.js.org/13"/>
+      <meta property="og:image" content="https://kyoto.js.org/static/13/logo.png"/>
       <meta property="og:description" content="The 13th meetup of Kyoto.js"/>
       <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/180.png"/>
       <link rel="apple-touch-icon-precomposed" href="/static/icons/180.png"/>
@@ -92,37 +121,40 @@ export default () => (
     </Helmet>
 
     <BgWrapper>
-      <Bg/>
+      {isMobile ? <BgImg src="/static/13/bg1.gif"/> : <Bg/>}
     </BgWrapper>
 
     <Wrapper>
       <Logo><img src="/static/13/logo.png"/></Logo>
 
       <Section>
-        <h2>今回のテーマは「無常」</h2>
-        <p>技術だけじゃ、何も起きない</p>
+        <h2>今回のテーマは「」</h2>
+        <p>フロントエンドは、生まれ、そして死んでいく</p>
       </Section>
 
-      <Section>
+      <SpeakersSection>
         <h2>Speakers</h2>
-        <p>TBD</p>
-      </Section>
+        <div>
+          <img src="/static/13/icon_amagi.png"/>
+          <span>amagitakayosi</span>
+        </div>
+        <div>
+          <img src="/static/13/icon_kuy.png"/>
+          <span>kuy</span>
+        </div>
+        <div>
+          <img src="/static/13/icon_bokuweb.png"/>
+          <span>bokuweb</span>
+        </div>
+        <p>順次追加予定</p>
+      </SpeakersSection>
 
       <TimetableSection>
         <h2>Timetable</h2>
         <ul>
+          <li>12:30 開場</li>
           <li>13:00 開始</li>
-          <li>13:10 「ライブコーディング環境をつくってみた」amagitakayosi</li>
-          <li>13:30 「TBD」john doe</li>
-          <li>13:50 休憩</li>
-          <li>14:00 「TBD」john doe</li>
-          <li>14:20 「TBD」john doe</li>
-          <li>14:40 休憩</li>
-          <li>14:50 「TBD」(LT) john doe</li>
-          <li>15:00 「TBD」(LT) john doe</li>
-          <li>15:10 「TBD」(LT) john doe</li>
-          <li>15:20 「TBD」(LT) john doe</li>
-          <li>15:30 懇親会</li>
+          <li>TBD</li>
         </ul>
       </TimetableSection>
 
