@@ -43,9 +43,9 @@ float fbm(in vec2 p) {
 vec4 lighten(in vec4 p) {
   vec4 x = vec4(0);
   float n = 3.;
-  x.r = 1.0 - pow(1. - p.r, n);
-  x.g = 1.0 - pow(1. - p.g, n);
-  x.b = 1.2 - pow(1. - p.b, n);
+  x.r = 1.3 - pow(1. - p.r, n);
+  x.g = 1.3 - pow(1. - p.g, n);
+  x.b = 1.6 - pow(1. - p.b, n);
   x.a = p.a;
   return x;
 }

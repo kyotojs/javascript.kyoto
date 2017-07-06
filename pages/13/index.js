@@ -36,6 +36,7 @@ const BgWrapper = styled.div`
 const BgImg = styled.img`
   width: 100%;
   height: 100%;
+  filter: contrast(50%) brightness(160%);
 `;
 
 const Section = styled.section`
@@ -52,6 +53,7 @@ const SpeakersSection = Section.extend`
   div {
     display: inline-block;
     width: 120px;
+    margin-bottom: 30px;
     img {
       display: block;
       width: 90px;
@@ -145,6 +147,18 @@ export default () => (
         <div>
           <img src="/static/13/icon_bokuweb.png"/>
           <span>bokuweb</span>
+        </div>
+        <div>
+          <img src="/static/13/icon_hiroqn.jpg"/>
+          <span>hiroqn</span>
+        </div>
+        <div>
+          <img src="/static/13/icon_kamiyam.jpg"/>
+          <span>kamiyam</span>
+        </div>
+        <div>
+          <img src="/static/13/icon_pastak.jpg"/>
+          <span>pastak</span>
         </div>
         <p>順次追加予定</p>
       </SpeakersSection>
