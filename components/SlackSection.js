@@ -30,7 +30,7 @@ export default () => (
       </TitleEl>
 
       <SubTitleEl>
-        Get Invitation <HighlightEl shadow={color.blue} href="//kyotojs.herokuapp.com/">HERE!</HighlightEl>
+        Get Invitation <HighlightEl shadow={color.blue} href="https://join.slack.com/t/kyotojs/shared_invite/enQtMzUyMDY4NTMwNTk3LWJjYWNjMmQ2MjhhYTM0YWU3OTg0ZjA2ZWIyYThkMGU2MWI2ODRkNTJmNDE5NzMzNDYzNjIzMDIxY2Q3NTkyNTU">HERE!</HighlightEl>
       </SubTitleEl>
     </HeaderEl>
 
